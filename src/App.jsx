@@ -1,23 +1,11 @@
-import style from "./App.module.css";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage/HomePage";
 
 function App() {
   return (
-    <div>
-      <header className={style.header}></header>
-      <main className={style.main}>
-        <ul className={style["card-list"]}>
-          <li className={style.card}>
-            <h4 className={style['title-card']}>H20</h4>
-          </li>
-          <li className={style.card}>
-            <h4 className={style['title-card']}>02</h4>
-          </li>
-          <li className={style.card}>
-            <h4 className={style['title-card']}>Light</h4>
-          </li>
-        </ul>
-      </main>
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage/>}/>
+    </Routes>
   );
 }
 
